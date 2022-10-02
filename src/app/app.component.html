@@ -1,0 +1,10 @@
+<div>
+<h2>Parent</h2>
+<p><span>Content form child:</span>{{childContent}}</p>
+<p>{{childClicked}}</p>
+<input type="text" name="text" id="parentInput" placeholder="Enter Text here">
+<button (click)="sentContent()">Send</button>
+</div>
+<div>
+<app-child (clickedtEvent)="clickedContent($event)" (contentEvent)="changeContent($event)" [childMessage]="parentInput"></app-child>
+</div>
